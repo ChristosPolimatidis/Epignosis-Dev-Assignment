@@ -41,20 +41,6 @@ composer install
 npm install
 ```
 
-### Dev: run API + Web (two terminals)
-
-```bash
-# Terminal A — PHP API (http://localhost:8000)
-php -S localhost:8000 -t public
-```
-
-```bash
-# Terminal B — Vite dev (http://localhost:5173)
-npm run dev
-```
-
-> CORS allows `http://localhost:5173` with **credentials (cookies)**.
-
 ### Initialize DB
 
 ```bash
@@ -68,6 +54,20 @@ php bin/migrate.php
   - Random `employee_code`
 
 > **Change this credential immediately**.
+
+### Dev: run API + Web (two terminals)
+
+```bash
+# Terminal A — PHP API (http://localhost:8000)
+php -S localhost:8000 -t public
+```
+
+```bash
+# Terminal B — Vite dev (http://localhost:5173)
+npm run dev
+```
+
+> CORS allows `http://localhost:5173` with **credentials (cookies)**.
 
 ---
 
@@ -188,6 +188,7 @@ Errors: `{ "error": "Message" }`.
   - `ManagerHome.jsx` → tabs:
     - **Requests**: approve/reject
     - **Users**: list, create (modal), edit (modal), delete
+
 
 Dev:
 
