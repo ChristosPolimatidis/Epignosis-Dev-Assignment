@@ -448,17 +448,37 @@ function EditUserModal({ user, onClose, onSaved }) {
 }
 
 /* ---------- Page wrapper exporting both panels with tabs or stacked ---------- */
+/**
+ * ManagerHome
+ * Centered like the other auth pages.
+ */
 export default function ManagerHome() {
   const [tab, setTab] = useState('requests'); // 'requests' | 'users'
 
   return (
-    <div style={{padding:'16px'}}>
-      <div className="tabs" style={{marginBottom:12}}>
-        <button className="tab" aria-selected={tab==='requests'} onClick={()=>setTab('requests')}>Requests</button>
-        <button className="tab" aria-selected={tab==='users'} onClick={()=>setTab('users')}>Users</button>
-      </div>
+    <div className="auth-page">
+      {/* width wrapper so tabs align with the card below */}
+      <div style={{ width: 'min(980px,96vw)' }}>
+        <div className="tabs" style={{ marginBottom: 12 }}>
+          <button
+            className="tab"
+            aria-selected={tab === 'requests'}
+            onClick={() => setTab('requests')}
+          >
+            Requests
+          </button>
+          <button
+            className="tab"
+            aria-selected={tab === 'users'}
+            onClick={() => setTab('users')}
+          >
+            Users
+          </button>
+        </div>
 
-      {tab === 'requests' ? <RequestsPanel /> : <UsersPanel />}
+        {/* Panels already render their own .auth-card; leaving them as-is */}
+        {tab === 'requests' ? <RequestsPanel /> : <UsersPanel />}
+      </div>
     </div>
   );
 }
