@@ -189,7 +189,7 @@ Errors: `{ "error": "Message" }`.
     - **Requests**: approve/reject
     - **Users**: list, create (modal), edit (modal), delete
 
-Frontend dependencies (install first)
+Frontend dependencies (install first):
 
 Before running the app, install the frontend dependencies and React Router:
 
@@ -199,6 +199,7 @@ npm i
 
 # install React Router (routing for /login, /register, /employee, /manager)
 npm i react-router-dom
+```
 
 Dev:
 
