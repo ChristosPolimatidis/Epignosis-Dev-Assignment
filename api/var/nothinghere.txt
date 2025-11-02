@@ -1,0 +1,3 @@
+There is nothing in this file... 
+The only reason to exist is that the var folder doesnt get deleted beacuse
+we need it to store the image of the sqlite database
